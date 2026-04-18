@@ -6,12 +6,16 @@
   <title>MARXION — Marketing Digital · Contenido · Redes Sociales</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap&font-display=swap" rel="stylesheet">
   <style>
     :root{
       --bg:#f5f6fa; --bg2:#ffffff;
       --text:#0b0c10; --muted:rgba(11,12,16,.72);
       --blur:44px;
+    }
+    @media(max-width:760px){
+      :root{ --blur:22px; --shadow:0 14px 40px rgba(0,0,0,.08); }
+    }
       --accentA:#ff3b30; --accentB:#2f6bff;
       --glass:rgba(255,255,255,.90);
       --glass2:rgba(255,255,255,.66);
@@ -51,6 +55,8 @@
         inset 0 1px 0 rgba(255,255,255,.60),
         inset 0 -1px 0 rgba(255,255,255,.18);
       overflow:hidden;
+      will-change:transform;
+      transform:translateZ(0);
     }
     .glass::before{
       content:"";
@@ -525,11 +531,11 @@
 
       <div class="glass glass-rect" style="padding:18px">
         <div class="vdeck" id="vdeck" aria-label="Galería vertical">
-          <button class="vdeck-card" type="button" style="--i:0" aria-label="Marketing 1"><img alt="Marketing 1" src="https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&w=1600&q=70" /></button>
-          <button class="vdeck-card" type="button" style="--i:1" aria-label="Marketing 2"><img alt="Marketing 2" src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=70" /></button>
-          <button class="vdeck-card" type="button" style="--i:2" aria-label="Marketing 3"><img alt="Marketing 3" src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=70" /></button>
-          <button class="vdeck-card" type="button" style="--i:3" aria-label="Marketing 4"><img alt="Marketing 4" src="https://images.unsplash.com/photo-1526481280695-3c687fd5432c?auto=format&fit=crop&w=1600&q=70" /></button>
-          <button class="vdeck-card" type="button" style="--i:4" aria-label="Marketing 5"><img alt="Marketing 5" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=70" /></button>
+          <button class="vdeck-card" type="button" style="--i:0" aria-label="Marketing 1"><img alt="Marketing 1" src="https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&w=900&q=65&fm=webp" loading="eager" decoding="async" /></button>
+          <button class="vdeck-card" type="button" style="--i:1" aria-label="Marketing 2"><img alt="Marketing 2" src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=65&fm=webp" loading="lazy" decoding="async" /></button>
+          <button class="vdeck-card" type="button" style="--i:2" aria-label="Marketing 3"><img alt="Marketing 3" src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=900&q=65&fm=webp" loading="lazy" decoding="async" /></button>
+          <button class="vdeck-card" type="button" style="--i:3" aria-label="Marketing 4"><img alt="Marketing 4" src="https://images.unsplash.com/photo-1526481280695-3c687fd5432c?auto=format&fit=crop&w=900&q=65&fm=webp" loading="lazy" decoding="async" /></button>
+          <button class="vdeck-card" type="button" style="--i:4" aria-label="Marketing 5"><img alt="Marketing 5" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=65&fm=webp" loading="lazy" decoding="async" /></button>
         </div>
       </div>
     </div>
@@ -553,7 +559,7 @@
 
   <section class="band" id="services">
     <div class="band-frame">
-      <div class="img"><img alt="" aria-hidden="true" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=2200&q=70" /></div>
+      <div class="img"><img alt="" aria-hidden="true" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1400&q=65&fm=webp" loading="lazy" decoding="async" /></div>
       <div class="band-overlay">
         <div class="overlay-inner">
           <div class="overlay-title">SERVICIOS</div>
@@ -578,7 +584,7 @@
 
   <section class="band">
     <div class="band-frame">
-      <div class="img"><img alt="" aria-hidden="true" src="https://images.unsplash.com/photo-1526481280695-3c687fd5432c?auto=format&fit=crop&w=2200&q=70" /></div>
+      <div class="img"><img alt="" aria-hidden="true" src="https://images.unsplash.com/photo-1526481280695-3c687fd5432c?auto=format&fit=crop&w=1400&q=65&fm=webp" loading="lazy" decoding="async" /></div>
       <div class="band-overlay">
         <div class="overlay-inner">
           <div class="overlay-title">RESULTADOS</div>
@@ -635,10 +641,10 @@
       <p style="margin:0 0 18px">Toca o pasa el cursor para desplegar la galería.</p>
 
       <div class="deck" id="deck" aria-label="Galería de trabajos">
-        <button class="deck-card" type="button" style="--i:0" aria-label="Trabajo 1"><img alt="Trabajo 1" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=70" /></button>
-        <button class="deck-card" type="button" style="--i:1" aria-label="Trabajo 2"><img alt="Trabajo 2" src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1600&q=70" /></button>
-        <button class="deck-card" type="button" style="--i:2" aria-label="Trabajo 3"><img alt="Trabajo 3" src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=70" /></button>
-        <button class="deck-card" type="button" style="--i:3" aria-label="Trabajo 4"><img alt="Trabajo 4" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=70" /></button>
+        <button class="deck-card" type="button" style="--i:0" aria-label="Trabajo 1"><img alt="Trabajo 1" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=65&fm=webp" loading="lazy" decoding="async" /></button>
+        <button class="deck-card" type="button" style="--i:1" aria-label="Trabajo 2"><img alt="Trabajo 2" src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=900&q=65&fm=webp" loading="lazy" decoding="async" /></button>
+        <button class="deck-card" type="button" style="--i:2" aria-label="Trabajo 3"><img alt="Trabajo 3" src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=65&fm=webp" loading="lazy" decoding="async" /></button>
+        <button class="deck-card" type="button" style="--i:3" aria-label="Trabajo 4"><img alt="Trabajo 4" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=65&fm=webp" loading="lazy" decoding="async" /></button>
       </div>
     </div>
   </section>
@@ -801,24 +807,23 @@
     if(vdeck) vdeck.addEventListener('click', ()=> vdeck.classList.toggle('spread'));
 
     const heroUrls = [
-      'https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&w=1600&q=70',
-      'https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1600&q=70',
-      'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=70',
-      'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=70',
-      'https://images.unsplash.com/photo-1526481280695-3c687fd5432c?auto=format&fit=crop&w=1600&q=70',
-      'https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=70'
+      'https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&w=900&q=65&fm=webp',
+      'https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=900&q=65&fm=webp',
+      'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=65&fm=webp',
+      'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=65&fm=webp',
+      'https://images.unsplash.com/photo-1526481280695-3c687fd5432c?auto=format&fit=crop&w=900&q=65&fm=webp',
+      'https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=900&q=65&fm=webp'
     ];
     const workUrls = [
-      'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=70',
-      'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=70',
-      'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=70',
-      'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=70',
-      'https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1600&q=70',
-      'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=70'
+      'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=65&fm=webp',
+      'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=65&fm=webp',
+      'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=65&fm=webp',
+      'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=65&fm=webp',
+      'https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=900&q=65&fm=webp',
+      'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=65&fm=webp'
     ];
 
     function preload(src){ const i = new Image(); i.src = src; }
-    [...heroUrls,...workUrls].slice(0,10).forEach(preload);
 
     function fadeSwap(img, nextSrc){
       if(!img||!nextSrc) return;
